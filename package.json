@@ -1,0 +1,22 @@
+{
+  "name": "HomeDashboard",
+  "description": "A dashboard for organized and modern families.",
+  "author": {
+    "name": "Virginia Carrasco Palos",
+    "email": "v@barecode.net"
+  },
+  "dependencies": {
+    "express": "~4.1.1",
+    "mongoose": "~3.8.8"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/virginc/HomeDashboard"
+  },
+  "license": "MIT",
+  "readmeFilename": "Readme.md",
+  "bugs": {
+    "url": "https://github.com/virginc/HomeDashboard/issues"
+  }
+}
