@@ -1,6 +1,6 @@
 /**
  * Created by Virginia on 5/2/2014.
- * Loads the base configuration for all environments and the config for the current environment
+ * Sets the environment, loads its config and base config
  */
 'use strict';
 
