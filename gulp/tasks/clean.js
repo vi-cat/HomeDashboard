@@ -8,6 +8,6 @@ var gulp = require('gulp'),
 	handleErrors = require('../util/handleErrors');
 
 gulp.task('clean', function () {
-	gulp.src('./builds/development', {read: false})
+	gulp.src('./builds/development/**/*.*', {read: false})
 		.pipe(clean())
 });

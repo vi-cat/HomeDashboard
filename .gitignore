@@ -2,3 +2,4 @@
 bower_modules/*
 node_modules/*
 builds/*
+npm-debug.log
