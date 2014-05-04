@@ -3,8 +3,8 @@
  */
 'use strict';
 
-var browserify = require('browserify'),
-	gulp = require('gulp'),
+var gulp = require('gulp'),
+	browserify = require('browserify'),
 	handleErrors = require('../util/handleErrors'),
 	source = require('vinyl-source-stream');
 
@@ -13,8 +13,8 @@ gulp.task('js', function () {
 		entries: ['./src/app.js'],
 		extensions: ['js']
 	})
-		.bundle({debuf: true})
+		.bundle({debug: true})
 		.on('error', handleErrors)
 		.pipe(source('app.js'))
-		.pipe(gulp.dest('./builds/development'))
+		.pipe(gulp.dest('./builds/development/js'))
 });

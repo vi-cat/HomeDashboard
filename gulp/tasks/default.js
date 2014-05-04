@@ -5,4 +5,4 @@
 
 var gulp = require('gulp');
 
-gulp.task('default', ['js']);
+gulp.task('default', ['clean', 'js', 'less']);
