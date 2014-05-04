@@ -1,7 +1,8 @@
 {
-	"name": "HomeDashboard",
-	"version": "0.0.1 Development Alpha",
-	"dependencies": {
-
-	}
+  "name": "HomeDashboard",
+  "version": "0.0.1 Development Alpha",
+  "dependencies": {},
+  "devDependencies": {
+    "Semantic-UI": "~0.16.1"
+  }
 }

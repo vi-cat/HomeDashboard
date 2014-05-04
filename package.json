@@ -13,7 +13,17 @@
     "method-override": "~1.0.0",
     "morgan": "~1.0.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "gulp": "~3.6.2",
+    "gulp-uglify": "~0.2.1",
+    "gulp-concat": "~2.2.0",
+    "gulp-newer": "~0.3.0",
+    "gulp-changed": "~0.3.0",
+    "gulp-clean": "~0.2.4",
+    "gulp-less": "~1.2.3",
+    "gulp-watch": "~0.6.4",
+    "gulp-inject": "~0.4.1"
+  },
   "repository": {
     "type": "git",
     "url": "git://github.com/virginc/HomeDashboard"
