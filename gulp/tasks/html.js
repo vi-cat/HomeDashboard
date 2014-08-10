@@ -4,7 +4,7 @@
 'use strict';
 
 var gulp = require('gulp'),
-	handleErrprs = require('../util/handleErrors');
+	handleErrors = require('../util/handleErrors');
 
 gulp.task('html', function () {
 	gulp.src('./src/index.html')

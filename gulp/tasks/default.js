@@ -3,6 +3,9 @@
  */
 'use strict';
 
-var gulp = require('gulp');
+var gulp = require('gulp'),
+	runSequence = require('run-sequence');
 
-gulp.task('default', ['clean', 'js', 'less', 'html']);
+gulp.task('default', function(callback) {
+	runSequence('clean', ['js', 'less', 'html'], 'inject', callback);
+});

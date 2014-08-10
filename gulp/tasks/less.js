@@ -13,5 +13,5 @@ gulp.task('less', function () {
 		.pipe(less())
 		.pipe(minify({keepSpecialComments: 0}))
 		.on('error', handleErrors)
-		.pipe(gulp.dest('./builds/development/less'))
+		.pipe(gulp.dest('./builds/development/css'))
 });
