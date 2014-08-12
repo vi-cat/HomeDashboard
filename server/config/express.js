@@ -8,12 +8,23 @@ var util = require('./util'),
 	morgan = require('morgan'),
 	bodyParser = require('body-parser'),
 	methodOverride = require('method-override'),
+	expressValidator = require('express-validator'),
 	appPath = process.cwd();
 
 module.exports = function (app, db) {
+	app.set('showStackError', true);
+
 	app.use(express.static(__dirname + '/public'));
-	app.use(morgan('dev'));
-	app.use(bodyParser());
+
+	if (process.env.NODE_ENV === 'development') {
+		app.use(morgan('dev'));
+	}
+
+	app.use(expressValidator());
+	app.use(bodyParser.json());
+	app.use(bodyParser.urlencoded({
+		extended: true
+	}));
 	app.use(methodOverride());
 
 	util.walk(appPath + '/server/routes', '/middlewares', function (path) {

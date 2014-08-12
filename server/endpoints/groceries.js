@@ -25,11 +25,11 @@ exports.getOne = function (req, res) {
 };
 
 exports.createNew = function (req, res) {
+	console.log(req.body);
 	var grocery = new Groceries();
-	// Dummy data
-	grocery.name = 'Test Grocery';
-	grocery.quantity = 5;
 	grocery.completed = false;
+	grocery.name = req.body.name;
+	grocery.quantity = req.body.quantity || 1;
 
 	grocery.save(function (err, grocery) {
 		if (err) {
