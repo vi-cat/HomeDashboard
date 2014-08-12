@@ -4,9 +4,10 @@
  */
 'use strict';
 
-module.exports = function (app) {
+module.exports = function (server) {
 
-	app.get('*', function (req, res) {
+	// Requests catch-all
+	server.get('*', function (req, res) {
 		res.sendfile('./src/index.html');
 	});
 
