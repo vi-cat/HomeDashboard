@@ -4,7 +4,8 @@ var mongoose = require('mongoose'),
 var GrocerySchema = new Schema({
 	'name': String,
 	'quantity': Number,
-	'purchased': Boolean
+	'purchased': Boolean,
+	'note': String
 });
 
 module.exports = mongoose.model('Grocery', GrocerySchema);
