@@ -7,6 +7,6 @@ var gulp = require('gulp'),
 	handleErrors = require('../util/handleErrors');
 
 gulp.task('html', function () {
-	gulp.src('./src/index.html')
+	gulp.src('./src/**.html')
 		.pipe(gulp.dest('./builds/development'))
 });

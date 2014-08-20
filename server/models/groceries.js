@@ -3,7 +3,7 @@ var mongoose = require('mongoose'),
 
 var GrocerySchema = new Schema({
 	'name': String,
-	'quantity': Number,
+	'quantity': String,
 	'purchased': Boolean,
 	'note': String
 });

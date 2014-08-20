@@ -5,6 +5,7 @@
 
 module.exports = {
 	db: 'mongodb://localhost/HomeDashboard',
+	basePath : './builds/development/',
 	app: {
 		name: 'HomeDashboard (Development)'
 	}

@@ -4,6 +4,7 @@
  */
 
 var util = require('./util'),
+	config = require('./config'),
 	express = require('express'),
 	morgan = require('morgan'),
 	bodyParser = require('body-parser'),
@@ -13,8 +14,10 @@ var util = require('./util'),
 
 module.exports = function (app, db) {
 	app.set('showStackError', true);
-
-	app.use(express.static(__dirname + '/public'));
+/*
+	app.use(config.basePath + '/js', express.static(__dirname + '/js'));
+	app.use(config.basePath + '/css', express.static(__dirname + '/css'));
+	app.use(config.basePath, express.static(__dirname + '/public'));*/
 
 	if (process.env.NODE_ENV === 'development') {
 		app.use(morgan('dev'));

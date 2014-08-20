@@ -10,8 +10,8 @@ var gulp = require('gulp'),
 
 gulp.task('less', function () {
 	gulp.src('./src/common/app.less')
+		.on('error', handleErrors)
 		.pipe(less())
 		.pipe(minify({keepSpecialComments: 0}))
-		.on('error', handleErrors)
 		.pipe(gulp.dest('./builds/development/css'))
 });

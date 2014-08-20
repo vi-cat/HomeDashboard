@@ -4,11 +4,13 @@
  */
 'use strict';
 
+var config = require('../config/config');
+
 module.exports = function (server) {
 
 	// Requests catch-all
 	server.get('*', function (req, res) {
-		res.sendfile('./src/index.html');
+		res.sendfile('index.html', {root: config.basePath});
 	});
 
 };
