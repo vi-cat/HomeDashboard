@@ -13,6 +13,7 @@ var gulp = require('gulp'),
 gulp.task('watch', function () {
 	livereload.listen();
 	gulp.watch('./src/**/*.less', ['less']).on('change', livereload.changed);
-	gulp.watch('./src/**/*.js', ['js']).on('change', livereload.changed);
+	gulp.watch('./src/**/*.js', ['js-newer']).on('change', livereload.changed);
 	gulp.watch('./src/index.html', ['inject']).on('change', livereload.changed);
+	gulp.watch('./src/**/*.tpl.html', ['templates']).on('change', livereload.changed);
 });

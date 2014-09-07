@@ -9,8 +9,7 @@ var config = require('../config/config');
 module.exports = function (server) {
 
 	// Requests catch-all
-	server.get('*', function (req, res) {
-		res.sendfile('index.html', {root: config.basePath});
+	server.get('/', function (req, res) {
+		res.sendfile('index.html');
 	});
-
 };

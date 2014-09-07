@@ -4,17 +4,41 @@
 'use strict';
 
 var gulp = require('gulp'),
-	browserify = require('browserify'),
-	handleErrors = require('../util/handleErrors'),
-	source = require('vinyl-source-stream');
+	concat = require('gulp-concat'),
+	uglify = require('gulp-uglify'),
+	newer = require('gulp-newer'),
+	flatten = require('gulp-flatten'),
+	sourcemaps = require('gulp-sourcemaps'),
+	handleErrors = require('../util/handleErrors');
+
+var sources = {
+	'appjs': './src/app.js',
+	'js': './src/**/*.js'
+};
+
+var builds = {
+	'dev': './builds/development'
+};
+
+// For development
 
 gulp.task('js', function () {
-	return browserify({
-		entries: ['./src/app.js'],
-		extensions: ['js']
-	})
-		.bundle({debug: true})
+	gulp.src([sources.appjs, sources.js])
 		.on('error', handleErrors)
-		.pipe(source('app.js'))
+		//.pipe(sourcemaps.init())
+		//.pipe(concat('app.js'))
+		//.pipe(uglify())
+		//.pipe(sourcemaps.write())
+		.pipe(gulp.dest(builds.dev + '/js'))
+});
+
+gulp.task('js-newer', function () {
+	return gulp.src([sources.appjs, sources.js])
+		.on('error', handleErrors)
+		//.pipe(sourcemaps.init())
+		//.pipe(concat('app.js'))
+		.pipe(newer(builds.dev + '/js'))
+		//.pipe(uglify())
+		//.pipe(sourcemaps.write())
 		.pipe(gulp.dest('./builds/development/js'))
 });

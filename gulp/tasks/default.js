@@ -6,6 +6,6 @@
 var gulp = require('gulp'),
 	runSequence = require('run-sequence');
 
-gulp.task('default', function(callback) {
-	runSequence('clean', ['js', 'less', 'html'], 'inject', 'watch', 'connect-dev', 'develop', callback);
+gulp.task('default', function (callback) {
+	runSequence('clean', ['js', 'less', 'fonts', 'templates'], 'inject', 'watch', 'connect-dev', 'develop', callback);
 });

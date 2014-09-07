@@ -1,21 +1,43 @@
 <!DOCTYPE html>
-<html>
-<head lang="en">
+<html lang="en" ng-app="homeDashboard" ng-controller="mainController">
+<head>
+    <base href="/">
     <meta charset="UTF-8">
-    <title>HomeDashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title ng-bind="pageTitle"></title>
     <!-- inject:css -->
     <!-- endinject -->
 </head>
 <body>
-    <div class="ui grid">
-        <div class="four wide column">
-            four test
-        </div>
-        <div class="eight wide column">
-            eight
-        </div>
+<div class="ui secondary pointing menu">
+    <a class="active item">
+        <i class="home icon"></i> Overview
+    </a>
+    <a class="item">
+        <i class="block layout icon"></i> Menus
+    </a>
+    <a class="item">
+        <i class="list layout icon"></i> Groceries
+    </a>
+</div>
+<div class="ui grid">
+    <div class="column">
+        <h1 class="ui header">
+            HomeDashboard
+            <div class="sub header">Where organization happens.</div>
+        </h1>
     </div>
-    <!-- inject:js -->
-    <!-- endinject -->
+</div>
+
+<main id="container" class="ui stackable grid" ui-view></main>
+
+<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js"></script>
+<script type="text/javascript"
+        src="http://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.10/angular-ui-router.min.js"></script>
+<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Open+Sans:300italic,400,300,700'
+      rel='stylesheet' type='text/css'>
+<!-- inject:js -->
+<!-- endinject -->
 </body>
 </html>

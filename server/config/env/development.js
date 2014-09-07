@@ -3,9 +3,11 @@
  */
 'use strict';
 
+var path = require('path');
+
 module.exports = {
 	db: 'mongodb://localhost/HomeDashboard',
-	basePath : './builds/development/',
+	appPath : path.normalize(__dirname + '/../../../builds/development/'),
 	app: {
 		name: 'HomeDashboard (Development)'
 	}

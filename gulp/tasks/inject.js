@@ -9,9 +9,9 @@ var gulp = require('gulp'),
 	handleErrors = require('../util/handleErrors');
 
 gulp.task('inject', function() {
-	return gulp.src('./builds/development/index.html')
+	return gulp.src('./src/index.html')
 		.on('error', handleErrors)
-		.pipe(inject(gulp.src('./builds/development/js/*.js', {read: false}), {ignorePath: '/builds/development/', addRootSlash: false}))
+		.pipe(inject(gulp.src('./builds/development/js/**/*.js', {read: false}), {ignorePath: '/builds/development/', addRootSlash: false}))
 		.pipe(inject(gulp.src('./builds/development/css/*.css', {read: false}), {ignorePath: '/builds/development/', addRootSlash: false}))
 		.pipe(gulp.dest('./builds/development/'));
 });
