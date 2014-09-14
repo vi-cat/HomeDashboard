@@ -7,7 +7,8 @@
 // Module listing
 
 angular.module('homeDashboard.overview', ['ui.router', 'templatesCache']);
-angular.module('homeDashboard', ['ui.router', 'homeDashboard.overview']);
+angular.module('homeDashboard.groceries', ['ui.router', 'templatesCache']);
+angular.module('homeDashboard', ['ui.router', 'homeDashboard.overview', 'homeDashboard.groceries']);
 
 // App start
 

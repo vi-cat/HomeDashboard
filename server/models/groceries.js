@@ -5,6 +5,7 @@ var GrocerySchema = new Schema({
 	'name': String,
 	'quantity': String,
 	'purchased': Boolean,
+	'recipe': Boolean,
 	'note': String
 });
 

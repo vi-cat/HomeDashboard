@@ -9,6 +9,7 @@ var groceriesEndpoint = require('../endpoints/groceries');
 
 module.exports = function (server) {
 	server.get('/groceries', groceriesEndpoint.getAll);
+	server.get('/groceries/urgent', groceriesEndpoint.getUrgent);
 	server.post('/groceries', groceriesEndpoint.createNew);
 	server.get('/groceries/:id', groceriesEndpoint.getOne);
 	server.put('/groceries/:id', groceriesEndpoint.updateOne)
